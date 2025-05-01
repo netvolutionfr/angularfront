@@ -1,0 +1,8 @@
+<h1>Products</h1>
+<p>Here you can find a list of all available products.</p>
+
+<ul>
+  <li *ngFor="let product of products()">
+    {{ product.name }} - {{ product.price | currency }} - {{ product.category?.name }}
+  </li>
+</ul>
