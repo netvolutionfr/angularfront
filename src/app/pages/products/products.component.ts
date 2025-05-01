@@ -1,13 +1,16 @@
 import {Component, effect, inject, signal} from '@angular/core';
 import {ProductResponse, ProductsService} from '../../api';
 import {catchError, of} from 'rxjs';
-import {CurrencyPipe, NgForOf} from '@angular/common';
+import {CurrencyPipe} from '@angular/common';
+import {TableModule} from 'primeng/table';
+import {Button} from 'primeng/button';
 
 @Component({
   selector: 'app-products',
   imports: [
-    NgForOf,
-    CurrencyPipe
+    CurrencyPipe,
+    TableModule,
+    Button
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
